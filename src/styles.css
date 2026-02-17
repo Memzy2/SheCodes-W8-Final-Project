@@ -119,9 +119,10 @@ main {
 }
 
 .current-details {
-  color: #4b5563;
+  color: #272142;
   font-size: 16px;
   line-height: 1.6;
+  font-weight: bold;
 }
 
 .current-details strong {
@@ -155,12 +156,43 @@ main {
   justify-content: start;
 }
 
+.weather-forecast-day {
+  text-align: center;
+  color: #272142;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+.weather-forecast-icon {
+  font-size: 38px;
+  text-align: center;
+}
+
+.weather-forecast-temperatures {
+  color: #ec4899;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.weather-forecast {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+}
+
+.little-temps {
+  padding: 0 10px;
+}
+
 footer {
   border-top: 2px solid rgba(255, 255, 255, 0.5);
   text-align: center;
   padding-top: 25px;
   font-size: 14px;
-  color: #6b7280;
+  color: #272142;
 }
 
 footer strong, footer a {
