@@ -180,7 +180,7 @@ main {
 .weather-forecast {
   display: flex;
   justify-content: space-around;
-  padding: 30px;
+  margin-top: 30px;
 }
 
 .little-temps {
