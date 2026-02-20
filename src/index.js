@@ -67,8 +67,6 @@ function searchtemp(event) {
 }
 
 function displayForecast() {
-  let forecastElement = document.querySelector("#forecast");
-
   let days = ["Mon", "Tue", "Wed", "Thur", "Fri"];
   let forecastHtml = "";
   
@@ -84,10 +82,11 @@ function displayForecast() {
              <strong>15°</strong>
             </div>
             <div class="little-temps">9°</div>
+          </div>
       </div>
      `;
   }); 
-
+  let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHtml;
 }
 
