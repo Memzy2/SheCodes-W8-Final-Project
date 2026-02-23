@@ -67,6 +67,13 @@ function searchtemp(event) {
   axios.get(url).then(changeT);
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+
+  return days[date.getDay()];
+}
+
 function getForecast(city) {
   let apiKey = "c7fa13d333obb49ef9t40cc2acbb1bec";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units+metric`;
@@ -85,7 +92,7 @@ function displayForecast(response) {
       forecastHtml +
       `
       <div class="weather-forecast-minibox">
-       <div class="weather-forecast-day">Tue</div>
+       <div class="weather-forecast-day">${formatDay(day.time)}</div>
           <img src="${day.condition.icon_url}" class="weather-forecast-icon" /> 
           <div class="weather-forecast-temperatures">
             <div class="little-temps">
